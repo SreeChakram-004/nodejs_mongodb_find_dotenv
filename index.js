@@ -70,5 +70,6 @@ app.get("/poll/content/:search",async(request,response)=>{
     const contestants=await getPolls(client,{content:{$regex:search,$options:"i"},});
     response.send(contestants);
 });
+console.log("..hie");
 
 app.listen(PORT,()=>console.log("server is started",PORT));
